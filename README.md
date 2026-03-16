@@ -1,64 +1,24 @@
-# John Fung
+# Jonathan Fung
 
-I build data pipelines and ML systems — mostly on AWS, mostly in Python.
-
-Currently focused on data engineering: moving data from messy to clean to useful.
+Data engineer. I build pipelines and ML systems on AWS.
 
 ---
 
-## Things I've built
+## Projects
 
-### Olist E-Commerce Pipeline
-Took a Kaggle dataset of 100k Brazilian e-commerce orders and built a proper 
-cloud pipeline around it. Raw CSVs go in, clean Parquet comes out, 
-dashboard at the end.
+**Olist E-Commerce Pipeline**
+100k Brazilian e-commerce orders through a medallion architecture pipeline.
+Raw CSVs → Glue PySpark → clean Parquet → Athena → Streamlit dashboard.
 
-**What I used:** AWS S3 · Glue (PySpark) · Athena · Streamlit
+**Delivery Time Predictor**
+Random Forest model predicting e-commerce delivery times trained on 96k orders.
+Turns out where you live explains 49% of how long your order takes to arrive.
 
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-black?logo=github)](https://github.com/jonjonfung/olist-ecommerce-pipeline)
-[![Live Demo](https://img.shields.io/badge/Streamlit-Live%20Demo-red?logo=streamlit)](your_streamlit_url_here)
-
----
-
-### Delivery Time Predictor
-Turns out where you live in Brazil explains 49% of how long your order takes 
-to arrive. Built a Random Forest model to predict delivery times — 
-trained on 96k orders, deployed as a live app.
-
-**What I used:** AWS Athena · Scikit-learn · Pandas · Streamlit · S3
-
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-black?logo=github)](https://github.com/jonjonfung/olist-delivery-prediction)
-[![Live Demo](https://img.shields.io/badge/Streamlit-Live%20Demo-red?logo=streamlit)](https://olist-delivery-prediction-bulkpjycmxq7mtulcq2dre.streamlit.app/)
-
----
-
-### Stock Data Pipeline
-Pulls Apple, Google, Microsoft, Amazon and Meta stock prices every morning 
-at 9am without me doing anything. EventBridge → Step Functions → Lambda → S3. 
-Dataset grows a little every day.
-
-**What I used:** AWS EventBridge · Step Functions · Lambda · S3 · Athena
-
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-black?logo=github)](https://github.com/jonjonfung/stock-data-pipeline)
+**Stock Data Pipeline**
+Pulls Apple, Google, Microsoft, Amazon and Meta stock prices every morning at 9am.
+EventBridge → Step Functions → Lambda → S3. Runs itself.
 
 ---
 
 ## Stack
-```
-Cloud     → AWS (S3, Glue, Athena, Lambda, Step Functions, EventBridge)
-Languages → Python, SQL
-DE tools  → PySpark, Pandas, Parquet
-ML        → Scikit-learn, Random Forest
-CI/CD     → GitHub Actions
-Dashboards→ Streamlit
-```
-
----
-
-## GitHub Stats
-
-![John's GitHub stats](https://github-readme-stats.vercel.app/api?username=jonjonfung&show_icons=true&theme=default)
-
----
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin)](your_linkedin_url_here)
+AWS · Python · PySpark · SQL · Scikit-learn · GitHub Actions
