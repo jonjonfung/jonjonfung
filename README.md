@@ -1,6 +1,6 @@
 # Jonathan Fung
 
-Data engineer. I build pipelines and ML systems on AWS.
+I build pipelines and ML systems on AWS.
 
 ---
 
